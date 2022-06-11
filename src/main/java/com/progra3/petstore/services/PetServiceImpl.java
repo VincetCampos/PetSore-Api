@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.progra3.petstore.DAO.PetDao;
 import com.progra3.petstore.entities.Pet;
-import com.progra3.petstore.exceptions.NotFoundExceptions;
+import com.progra3.petstore.exceptions.NotFoundException;
 
 @Service
 public class PetServiceImpl implements PetService{
@@ -28,7 +28,7 @@ public class PetServiceImpl implements PetService{
 		if(optionalPet.isPresent()) {
 			return optionalPet.get();
 		}else {
-			throw new NotFoundExceptions("No se encontro a la mascota");
+			throw new NotFoundException("No se encontro a la mascota");
 		}
 		
 	}
@@ -45,7 +45,7 @@ public class PetServiceImpl implements PetService{
 			return petDao.save(pet);
 			
 		}else {
-			throw new NotFoundExceptions("No se encontro a la mascota");
+			throw new NotFoundException("No se encontro a la mascota");
 		}
 	}
 
@@ -55,7 +55,7 @@ public class PetServiceImpl implements PetService{
 		if(petDao.existsById(id)) {
 			petDao.deleteById(id);
 		}else {
-			throw new NotFoundExceptions("No se encontro a la mascota");
+			throw new NotFoundException("No se encontro a la mascota");
 		}
 		
 	}

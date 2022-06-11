@@ -1,0 +1,24 @@
+INDEX VERSION 1.131+E:\Tareas Quinto Semestre\Api-PetStore-main\.metadata\.plugins\org.eclipse.jdt.core
+923652386.index
+63840187.index
+2110456956.index
+214524190.index
+608658554.index
+2184265033.index
+2612708870.index
+1574430231.index
+1865797976.index
+1878516653.index
+4036364271.index
+1366417069.index
+430499053.index
+1200559231.index
+3567742621.index
+452661917.index
+1258176077.index
+541794267.index
+3473926779.index
+578866716.index
+1364706590.index
+3140083223.index
+2917110295.index
