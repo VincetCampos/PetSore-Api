@@ -37,7 +37,7 @@ public class PetController {
 	}
 	
 	@GetMapping("/{id}")
-	public Pet findPet(@PathVariable Long id) {
+	public Pet findPet(@PathVariable long id) {
 		return service.findById(id);
 	}
 	
@@ -50,12 +50,12 @@ public class PetController {
 	
 	//Validacion en actualizar
 	@PutMapping("/{id}")
-	public Pet updatePet(@PathVariable Long id, @Valid @RequestBody Pet pet) {
+	public Pet updatePet(@PathVariable long id, @Valid @RequestBody Pet pet) {
 		return service.updatePet(id, pet);
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deletePet(@PathVariable Long id) {
+	public void deletePet(@PathVariable long id) {
 		service.deletePet(id);
 	}
 	
