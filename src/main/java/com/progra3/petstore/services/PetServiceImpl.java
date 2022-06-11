@@ -22,7 +22,7 @@ public class PetServiceImpl implements PetService{
 	}
 
 	@Override
-	public Pet findById(Long id) {
+	public Pet findById(long id) {
 		Optional<Pet> optionalPet = petDao.findById(id);
 		
 		if(optionalPet.isPresent()) {
@@ -39,7 +39,7 @@ public class PetServiceImpl implements PetService{
 	}
 
 	@Override
-	public Pet updatePet(Long id, Pet pet) {
+	public Pet updatePet(long id, Pet pet) {
 		if(petDao.existsById(id)) {
 			pet.setId(id);
 			return petDao.save(pet);
@@ -50,7 +50,7 @@ public class PetServiceImpl implements PetService{
 	}
 
 	@Override
-	public void deletePet(Long id) {
+	public void deletePet(long id) {
 		
 		if(petDao.existsById(id)) {
 			petDao.deleteById(id);
