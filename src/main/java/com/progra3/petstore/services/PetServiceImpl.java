@@ -28,6 +28,7 @@ public class PetServiceImpl implements PetService{
 		if(optionalPet.isPresent()) {
 			return optionalPet.get();
 		}else {
+			
 			throw new NotFoundException("No se encontro a la mascota");
 		}
 		
@@ -40,13 +41,17 @@ public class PetServiceImpl implements PetService{
 
 	@Override
 	public Pet updatePet(long id, Pet pet) {
+		
 		if(petDao.existsById(id)) {
 			pet.setId(id);
 			return petDao.save(pet);
 			
 		}else {
-			throw new NotFoundException("No se encontro a la mascota");
+			System.out.println("no");
+			
+			throw new NotFoundException("Mascota no encontrado");
 		}
+		
 	}
 
 	@Override
@@ -55,7 +60,9 @@ public class PetServiceImpl implements PetService{
 		if(petDao.existsById(id)) {
 			petDao.deleteById(id);
 		}else {
+			
 			throw new NotFoundException("No se encontro a la mascota");
+			
 		}
 		
 	}
