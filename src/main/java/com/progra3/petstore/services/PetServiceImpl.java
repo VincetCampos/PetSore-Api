@@ -47,7 +47,6 @@ public class PetServiceImpl implements PetService{
 			return petDao.save(pet);
 			
 		}else {
-			System.out.println("no");
 			
 			throw new NotFoundException("Mascota no encontrado");
 		}
